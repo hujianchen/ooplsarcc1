@@ -1,5 +1,5 @@
 CXX        := g++
-CXXFLAGS   := -pedantic -std=gnu++11 -Wall
+CXXFLAGS   := -pedantic -std=c++11 -Wall
 GTEST_DIR = /home/Hujianchen/googletest/googletest
 
 LDFLAGS    := -lgtest -lgtest_main -pthread
@@ -49,7 +49,7 @@ RunCollatz.tmp: RunCollatz
 	diff RunCollatz.tmp RunCollatz.out
 
 TestCollatz: Collatz.h Collatz.c++ TestCollatz.c++
-	$(CXX) $(CXXFLAGS) $(GCOVFLAGS) -I$(INC) Collatz.c++ TestCollatz.c++ -o TestCollatz $(LDFLAGS)
+	$(CXX) $(CXXFLAGS) $(GCOVFLAGS) Collatz.c++ TestCollatz.c++ -o TestCollatz $(LDFLAGS)
 
 TestCollatz.tmp: TestCollatz
 	$(VALGRIND) ./TestCollatz                                       >  TestCollatz.tmp 2>&1
