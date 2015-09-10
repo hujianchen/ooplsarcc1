@@ -34,7 +34,7 @@ pair<int, int> collatz_read (const string& s) {
 // ------------
 
 int collatz_eval (int i, int j) {
-    // <your code>
+    
     int max_cycle = 1;
     int current_cycle = 1;
     if (i > j) 
