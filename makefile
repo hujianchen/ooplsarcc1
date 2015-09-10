@@ -1,16 +1,12 @@
-CXX        := g++
+CXX        := g++-4.8
 CXXFLAGS   := -pedantic -std=c++11 -Wall
 GTEST_DIR = /home/Hujianchen/googletest/googletest
-
 LDFLAGS    := -lgtest -lgtest_main -pthread
 GCOV       := gcov-4.8
 GCOVFLAGS  := -fprofile-arcs -ftest-coverage
 GPROF      := gprof
 GPROFFLAGS := -pg
 VALGRIND   := valgrind
-INC=/home/Hujianchen/googletest/googletest/include
-
-GTEST_DIR = /home/Hujianchen/googletest/googletest
 
 
 clean:
